@@ -36,7 +36,7 @@ func LoadConfig(configPath string) (*Config, error) {
 	}
 
 	viper.SetConfigFile(configPath)
-	if err := viper.ReadConfig(); err != nil {
+	if err := viper.ReadInConfig(); err != nil {
 		return nil, fmt.Errorf("error reading config file, %s", err)
 	}
 

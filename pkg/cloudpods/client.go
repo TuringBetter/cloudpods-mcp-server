@@ -60,7 +60,12 @@ func NewClient(config *config.Config, toolsReg *tools.Registry) (*Client, error)
 
 func (c *Client) RegisterAllTools() {
 	c.RegisterListRegionsTool()
-	c.RegisterGetRegionsTool()
+	c.RegisterGetRegionTool()
+	c.RegisterListVPCsTool()
+	c.RegisterListServersTool()
+	c.RegisterGetServerTool()
+	c.RegisterStartServerTool()
+	c.RegisterStopServerTool()
 }
 
 // doRequest 执行HTTP请求
